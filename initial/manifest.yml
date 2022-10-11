@@ -1,0 +1,11 @@
+---
+applications:
+  - name: gs-gateway
+    memory: 1G
+    routes:
+      - route: gs-gateway.cfapps.pcfeagleci.cf-app.com
+    path: build/libs/gs-gateway-0.1.0.jar
+    env:
+      JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+#      SPRING_PROFILES_ACTIVE: http2
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'

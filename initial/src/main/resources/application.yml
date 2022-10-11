@@ -1,0 +1,18 @@
+---
+spring:
+  config:
+    activate:
+      on-profile: standalone
+
+server:
+  ssl:
+    key-store: classpath:router_server.p12
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: 1
+    key-password: password
+    trust-store: classpath:user_truststore.jks
+    trust-store-password: password
+    trust-store-type: JKS
+    client-auth: want
+  port: 8443
